@@ -28,25 +28,6 @@ cubes:
         sql: age
         type: number
 
-        # 'case' properties provide a way to define dimensions based on a sequence of SQL conditions.
-        # Learn more: https://docs.cube.dev/reference/data-modeling/dimensions
-      - name: age_bucket
-        case:
-          when:
-            - sql: "{age} BETWEEN 0 AND 12"
-              label: Child
-            - sql: "{age} BETWEEN 13 AND 19"
-              label: Teenager
-            - sql: "{age} BETWEEN 20 AND 40"
-              label: Young adult
-            - sql: "{age} BETWEEN 40 AND 60"
-              label: Middle adult
-            - sql: "{age} BETWEEN 60 AND 999"
-              label: Senior adult
-          else:
-            label: Unknown
-        type: string
-
       - name: gender
         sql: gender
         type: string
