@@ -1,6 +1,6 @@
 cubes:
   - name: users
-    description: Customers of the store, one row per user.
+    description: Customers of the store, one row per user. This is the stage users.
     sql: SELECT * FROM users
     public: false
 
